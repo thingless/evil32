@@ -1,0 +1,77 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #222;
+    margin: 3em 0;
+}
+pre {
+    font-weight: 300;
+    font-size: .7em;
+}
+h1 {
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+}
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 1em 0;
+}
+h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 2em 0 0.5em 0;
+
+}
+h4 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 2em 0 0.5em 0;
+}
+code {
+    background-color: #f5f5f5;
+    color: #333;
+}
+.timestamp {
+    color: #999;
+    font-size: 0.8em;
+}
+.container {
+    background-image:url('EvilKeyHalf_small.gif');
+    background-repeat:no-repeat;
+    background-attachment:scroll;
+    background-position:100% 5px; 
+    background-size: 50%;
+}
+@media (min-width: 768px) {
+    pre {
+        font-size: .9em;
+    }
+    h1 {
+        margin: 1em 0;
+        text-align: left;
+    }
+    .download {
+        padding-left: 20px;
+        font-size: 0.8em;
+    }
+    .container {
+        background-image:url('EvilKeyHalf_768px.gif');
+        background-size: auto;
+    }
+}
+@media (min-width: 992px) {
+    body {
+        font-size: 2em;
+    }
+    .container {
+        max-width: 970px;
+        background-image:url('EvilKeyHalf_992px.gif');
+        background-size: auto;
+    }
+    hr {
+        margin: 3em 0;
+    }
+}

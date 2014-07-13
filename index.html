@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <title>Evil 32: Check Your GPG Fingerprints</title>
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,400,400italic" type="text/css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type='text/css'>
+    <link rel="stylesheet" href="/evil32.css" type='text/css'>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h1>Evil 32: Check Your GPG Fingerprints</h1>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-lg-push-8 col-md-push-8 col-sm-push-8" style="padding-top: 30px; text-align: center;"></div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-lg-pull-4 col-md-pull-4 col-sm-pull-4">
+          The usage of GPG has grown steadily yet the tooling that supports it has remained stagnant despite staggering hardware advancement. Choices that seemed reasonable 15 years ago (e.g. 32bit key ids) are obsolete. Using modern GPUs, we have found collisions for every 32bit key id in the WOT's(Web of Trust) strong set. Although this does not break GPG's encryption, it further erodes the usability of GPG and increases the chance of human error.
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <h3>Check your fingerprints</h3>
+          Key servers do not use transport encryption (e.g. SSL) and GPG does not verify keys received when using <code>--recv-keys</code> leaving communicaiton with key servers vulnerable to MITM (man in the middle) or DNS attacks. GPG assumes you have manually checked your keys with <code>--fingerprint</code>.
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <h3>Stop using 32bit key ids</h3>
+          <p>It takes 4 seconds to generate a colliding 32bit key id on a GPU (using <a target="_blank" href="https://github.com/lachesis/scallion">scallion</a>). Key servers do little verification of uploaded keys and allow keys with colliding 32bit ids. Further, GPG uses 32bit key ids throughout its interface and does not warn you when an operation might apply to multiple keys.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <h3>Examples</h3>
+          <h4>GPG does not verify received keys</h4>
+          <p>GPG simply imports whatever the key server sends. No verfication of the response is done before importing.
+          <i>It is assumed keys are verified with <code>--recv-keys</code></i>. In the example below, a key is being requested and GPG blindly imports a different key.</p>
+<pre>
+<b>free@turing ~$</b> gpg --keyserver pgp.mit.edu --recv-keys 10000001
+
+<b>gpg:</b> requesting key 10000001 from hkp server pgp.mit.edu
+<b>gpg:</b> key 0BADBEEF: public key "Evil32" imported
+<b>gpg:</b> Total number processed: 1
+<b>gpg:</b> imported: 1 (RSA: 1)
+</pre>
+
+        <h4>32bit key ids are not secure</h4>
+        <p>In the example below, a key is being requested with its 32bit key id. The key server has two keys with the specified key id and GPG imports both keys. It is easy to generate and publish a key that looks identical if you only use 32 bits when specifying a key.</p>
+<pre>
+<b>free@turing ~$</b> gpg --keyserver pgp.mit.edu --recv-keys 10000001
+
+<b>gpg:</b> requesting key 10000001 from hkp server pgp.mit.edu
+<b>gpg:</b> key 10000001: public key "John Doe <john@doe.com>" imported
+<b>gpg:</b> key 10000001: public key "Jane Doe <jane@doe.com>" imported
+<b>gpg:</b> Total number processed: 2
+<b>gpg:</b>            imported: 2  (RSA: 2)
+</pre>
+        <p class="timestamp">Page updated 2014-06-12 20:27 UTC.</p>
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
