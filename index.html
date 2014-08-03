@@ -82,12 +82,27 @@
         <p>Key exchange is hard and there are no perfect solutions. That being said, there are some changes that could be made to GPG to make things better.</p>
         <ul>
           <li>If you specify a key id or fingerprint when using <code>--recv-keys</code> GPG should verify that the key/keys returned by the key server actually have the key id or fingerprint you requested.</li>
-          <li>When its ambiguous what key an operation should act on (because of key id collisions or uuid collisions) GPG should refuse to perform the operation. Some examples that would be resolved by this change include <a href="#duplicate-recv-key-example">receiving keys</a> and <a>editing trust</a>.</li>
+          <li>When its ambiguous what key an operation should act on (because of key id collisions or uuid collisions) GPG should refuse to perform the operation. This would fix the issue of <a href="#duplicate-recv-key-example">receiving keys</a>.</li>
         </ul>
 
         <h4>Aren't you suppose to use the Web of Trust to verify the authenticity of keys?</h4>
         <p>Absolutely! The web of trust is a great mechanism by which to verify keys but its complicated and as a result often not used. There are examples of GPG being used without the Web of Trust all over the web.</p>
         <blockquote>The Warning: "no ultimately trusted keys found" means that gpg was not configured to ultimately trust a specific key. Trust settings are part of OpenPGPs Web-of-Trust which does not apply here. - <a href="https://wiki.debian.org/SecureApt" target="_blank"/>Debian SecureApt Wiki</a></blockquote>
+
+        <h4>Who should I contact with questions?</h4>
+        <p>If you have questions related to this page or <a href="https://github.com/lachesis/scallion" target="_blank">Scallion</a> you should email <a href="mailto:scallion@aftbit.com?Subject=Evil32">scallion@aftbit.com</a></p>
+
+        <h4>Who authored this page?</h4>
+        <p>
+        <u>Eric Swanson</u><br>
+        Email: <img src="/eric_email.png"><br>
+        GPG Fingerprint: <code>9E15397E4D537E3A3A238F87E620C8A74BAF5D09</code><br>
+        GPG Key: <a href="/EricSwanson.gpg" download>download here</a><br>
+        <u>Richard Klafter</u><br>
+        Email: <img src="/richard_email.png"><br>
+        GPG Fingerprint: <code>CB7C8A7B567FB2C2ACC2873B04FAC2E9CC21424A</code><br>
+        GPG Key: <a href="/RichardKlafter.gpg" download>download here</a><br>
+        </p>
 
         <p class="timestamp">Page updated 2014-06-12 20:27 UTC.</p>
 
