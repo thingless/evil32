@@ -82,7 +82,7 @@
         <p>Key exchange is hard and there are no perfect solutions. That being said, there are some changes that could be made to GPG to make things better.</p>
         <ul>
           <li>If you specify a key id or fingerprint when using <code>--recv-keys</code> GPG should verify that the key/keys returned by the key server actually have the key id or fingerprint you requested.</li>
-          <li>When its ambiguous what key an operation should act on (because of key id collisions or uuid collisions) GPG should refuse to perform the operation. This would fix the issue of <a href="#duplicate-recv-key-example">receiving keys</a>.</li>
+          <li>When it's ambiguous what key an operation should act on (because of key id collisions or uuid collisions) GPG should refuse to perform the operation automatically. This would fix the issue of <a href="#duplicate-recv-key-example">receiving keys</a>.</li>
         </ul>
 
         <h4>Aren't you suppose to use the Web of Trust to verify the authenticity of keys?</h4>
