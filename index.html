@@ -48,7 +48,7 @@
           <h3>Examples</h3>
           <h4>GPG does not verify received keys</h4>
           <p>GPG simply imports whatever the key server sends. No verfication of the response is done before importing.
-          <i>GPG assumes users will separately verify keys from <code>--recv-keys</code></i>. In the example below, a key is requested and GPG blindly imports a different key.</p>
+          <i>GPG assumes users will manually verify keys received with <code>--recv-keys</code></i>. In the example below, a key is requested and GPG blindly imports a different key.</p>
 <pre>
 <b>free@turing ~$</b> gpg --keyserver pgp.mit.edu --recv-keys 10000001
 
