@@ -27,7 +27,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-lg-push-8 col-md-push-8 col-sm-push-8" style="padding-top: 30px; text-align: center;"></div>
         <div class="col-lg-8 col-md-8 col-sm-8 col-lg-pull-4 col-md-pull-4 col-sm-pull-4">
-          The usage of GPG has grown steadily yet the tooling that supports it has remained stagnant despite staggering hardware advancement. Choices that seemed reasonable 15 years ago (e.g. 32bit key ids) are obsolete. Using modern GPUs, we have found collisions for every 32bit key id in the WOT's(Web of Trust) strong set. Although this does not break GPG's encryption, it further erodes the usability of GPG and increases the chance of human error.
+          GPG usage has grown steadily while the tooling that supports it remains stagnant despite staggering hardware advancement. 32bit key ids were reasonable 15 years ago but are obsolete now. Using modern GPUs, we have found collisions for every 32bit key id in the WOT's (Web of Trust) strong set. Although this does not break GPG's encryption, it further erodes the usability of GPG and increases the chance of human error.
         </div>
       </div>
 
@@ -48,7 +48,7 @@
           <h3>Examples</h3>
           <h4>GPG does not verify received keys</h4>
           <p>GPG simply imports whatever the key server sends. No verfication of the response is done before importing.
-          <i>It is assumed keys are verified with <code>--recv-keys</code></i>. In the example below, a key is being requested and GPG blindly imports a different key.</p>
+          <i>GPG assumes users will separately verify keys from <code>--recv-keys</code></i>. In the example below, a key is requested and GPG blindly imports a different key.</p>
 <pre>
 <b>free@turing ~$</b> gpg --keyserver pgp.mit.edu --recv-keys 10000001
 
@@ -59,7 +59,7 @@
 </pre>
 
         <a name="duplicate-recv-key-example"></a><h4>32bit key ids are not secure</h4>
-        <p>In the example below, a key is being requested with its 32bit key id. The key server has two keys with the specified key id and GPG imports both keys. It is easy to generate and publish a key that looks identical if you only use 32 bits when specifying a key.</p>
+        <p>In the example below, a key is requested with its 32bit key id. The key server has two keys with the specified key id and GPG imports both keys. It is easy to generate and publish a key that looks identical if you only use 32 bits when specifying a key.</p>
 <pre>
 <b>free@turing ~$</b> gpg --keyserver pgp.mit.edu --recv-keys 10000001
 
@@ -86,8 +86,11 @@
         </ul>
 
         <h4>Aren't you suppose to use the Web of Trust to verify the authenticity of keys?</h4>
-        <p>Absolutely! The web of trust is a great mechanism by which to verify keys but its complicated and as a result often not used. There are examples of GPG being used without the Web of Trust all over the web.</p>
+        <p>Absolutely! The web of trust is a great mechanism by which to verify keys but it's complicated. As a result, it is often not used. There are examples of GPG being used without the Web of Trust all over the web.</p>
         <blockquote>The Warning: "no ultimately trusted keys found" means that gpg was not configured to ultimately trust a specific key. Trust settings are part of OpenPGPs Web-of-Trust which does not apply here. - <a href="https://wiki.debian.org/SecureApt" target="_blank"/>Debian SecureApt Wiki</a></blockquote>
+
+         <h4>I know about the problems with 32bit key ids, am I safe now?</h4>
+         <p>That depends. Many tools use GPG behind-the-scenes and have the same problems, but never directly show you fingerprints or prompt you. Check that maintainers of software you use are aware of these problems as well.</p>
 
         <h4>Who should I contact with questions?</h4>
         <p>If you have questions related to this page or <a href="https://github.com/lachesis/scallion" target="_blank">scallion</a> you should email <a href="mailto:scallion@aftbit.com?Subject=Evil32">scallion@aftbit.com</a></p>
