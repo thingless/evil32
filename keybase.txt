@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/aftbit
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://evil32.com
+  * I am aftbit (https://keybase.io/aftbit) on keybase.
+  * I have a public key with fingerprint 9E15 397E 4D53 7E3A 3A23  8F87 E620 C8A7 4BAF 5D09
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101a63d585058c7594824cd785e3ba2d044034d95b5de0d53226fcbb19c1ff32fe10a",
+            "fingerprint": "9e15397e4d537e3a3a238f87e620c8a74baf5d09",
+            "host": "keybase.io",
+            "key_id": "e620c8a74baf5d09",
+            "kid": "0101a63d585058c7594824cd785e3ba2d044034d95b5de0d53226fcbb19c1ff32fe10a",
+            "uid": "f57eef4e698659fb5227d1c7b16c8d00",
+            "username": "aftbit"
+        },
+        "service": {
+            "hostname": "evil32.com",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1471362798,
+    "expire_in": 157680000,
+    "prev": "47b97bbe1f05b59688c65fcaac12a80c9ba0056756c884771771e52145f41cb7",
+    "seqno": 15,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owGtUn1MVWUcvoggXEOQXRwwUTirSwKj8/2egyDgGubKwUQoNLicj/fAGXDO5d7D
+BUSYI9qkDUXEICZtXpVigV/AGJEyS0CCao1wxqRwCMWSIZMaElTnMPuvP3v3bu/e
+3/s8z/s8v/3q/TxNPh5z4fc+efNatq/H6DxveruLXq5AeFUsR+IqkAK4ccBCETo1
+W4EsInEIiqEYRxMixVAoxQiAYkkGJwURMBQkeA4XUZJECVJkKZ4SISpSBI7TksDz
+GCtgkkTgEsRQDolBJFnJgw67Q1Y0XZaFGEWwAJI6AUCCIzicYCQGQBpHBYYDJM9J
+lIiyOjFfdRoM3RzPOWGsrOo1/WLbsPcf+P/Zd8mGnEQBCCUS0ixDU6zEUzgOREwA
+PEYLjIiiBtAJHQpXBHU0J2m8rCGVMYhec8kCNNpq5HjxDl1yIYHHCmqRzrM7VE0V
+1EK9nq9pdmecwdPK7QawFPK2FxI2XlZEvYc6wwUdTllVkDhMRwqabGhiJMAIGgcs
+E4PAMrvsgDbZQFCAZlB9Gf9Aly5JAp4FPA8xCc3Qs7M0wwg0JQkcJ2A4x6ACy3Mo
+StGA0pMxJACYviGFYyQlkZjAA8RIVayohrhulMvTRZ1ynsJpJQ6IVJprN+3cbPLw
+MXl7bTLGy2T2Dfh35rrXA0znfg3cd+WbYCnv09acfVVj5+O+v3kmc0do6/UCh7Ug
+PNAaxF8dPddvDTuZPLN8DOk9+LS5FLNbA/3vjkhTH1QUl9TY0lunMe/36WeNGTzi
+/QbR4T6jZPqfvrs40TN4Kx20BdV5N5mqzFHjWzNmXWl/fPX1t0cnw35O3BsufvaY
+7JH9nkWcVnYOxneSk9nKBWHmz+Hf+6aaLYXJ0x/PY+7uQ4er0xqTEhI0LeNw8AQ8
+f7v5l+HW9q3Z6tL6lT0XE3Ylkl4e5thdVZbQPQtPoMmye6XBfNzzUGtqcb1j9sve
+l8dixx+FXzxgS3jJ7fywLb52grx5atkzOezGKUtEWWCUV8gPk+9G7s49khVPkAvb
+0r97a8Rv7knlJWp16fUbLVVrXQ/nJ36sthy54/JfXZoeOjD9+HZ5Zc5AZM6Cx5aU
+ttmSjoCo1KbG12b39k2vhmTU7W/Dhq3+9XPJ7oEvanLj1y9ENnXOHbveYmmODh35
+6Or+eykr6vakwLKayKPuKUtf++c+m4MuDxb1XqIj6g+unOh2rzVoY4sLYPzv7dnt
+ozt6HggPg1PeWcx871Zt+UCWkNrpeaK77NXo+0+HvPptRWsPutbyE+tGQMjla/y2
+ovW/hqyNjc+zQrnesXxfrn7l7GzMT6Z+01iH0nWyqSX3/uTx0ldG7WtJv+V1BDU8
+qp55vuVOdNo/
+=hP9f
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/aftbit
+
+==================================================================
